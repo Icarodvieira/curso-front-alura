@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-    --cor-primaria: #543310;
-    --cor-segundaria: #F8F4E1;
-    --cor-terciaria: #AF8F6F;
-    --cor-hover: #74512D;
+    --cor-primaria: #000B58;
+    --cor-segundaria: #006A67;
+    --cor-terciaria: #FFF4B7;
+    --cor-hover: #003161;
 
     --fonte-primaria: "Krona One", serif;
     --fonte-secundaria: "Montserrat", sans-serif;
@@ -17,7 +17,7 @@
 body{
     background-color: var(--cor-primaria);
     color: var(--cor-segundaria);
-    /* height: 100vh; */
+    box-sizing: border-box;
 }
 
 .cabecalho {
@@ -26,7 +26,7 @@ body{
 
 .cabecalho__menu__link{
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--cor-terciaria);
@@ -37,31 +37,31 @@ body{
     gap: 80px;
 }
 
-
 .apresentacao {
-    padding: 5% 25%;
+    padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 .titulo-destaque{
     color: var(--cor-terciaria);
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
@@ -76,15 +76,15 @@ body{
 .apresentacao__botoes_titulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .apresentacao__botoes__botao {
     padding: 21.5px 0px;
     border-radius: 8px;
     text-align: center;
-    width: 378px;
-    font-size: 24px;
+    width: 50%;
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--cor-segundaria);
     border: solid 2px var(--cor-terciaria);
@@ -100,20 +100,35 @@ body{
     background-color: var(--cor-hover);
 }
 
-.foto__perfil:hover {
-    transform: scale(1.2);
-}
-
-.foto__perfil {
+.apresentacao__imagem {
     transition: 1s;
+    width: 50%;
+}
+.apresentacao__imagem:hover {
+    transform: scale(1.050);
 }
 
 .rodape {
     padding: 24px;
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+    
 }
